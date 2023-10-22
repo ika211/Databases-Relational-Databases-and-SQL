@@ -43,7 +43,7 @@ WHERE old.rID = new.rID and old.mID = new.mID
 SELECT m.title, MAX(r.stars)
 FROM Movie m, Rating r
 WHERE r.mID = m.mID
-GROUP BY m.mID
+GROUP BY m.mID, m.title
 ORDER BY m.title;
 
 -- For each movie, return the title and the 'rating spread', that is, the difference between highest and
