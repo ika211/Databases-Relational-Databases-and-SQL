@@ -100,13 +100,3 @@ SELECT MAX(stars)
 FROM Movie m2, Rating r
 WHERE m2.mID = r.mID and m1.director = m2.director
 GROUP BY m2.director);
-
-
-
-SELECT *
-FROM Reviewer re LEFT JOIN Rating r
-ON re.rID = r.rID;
-
-SELECT *
-FROM Movie m RIGHT JOIN Rating r
-ON m.mID = r.mID;
